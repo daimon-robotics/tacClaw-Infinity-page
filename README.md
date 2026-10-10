@@ -2,11 +2,11 @@
 
 这是一套可直接部署到 GitHub Pages 的静态网站，无需安装依赖或构建。
 
-网页源码仓库：`daimon-robotics/tacClaw-Infinity-page`
+网页源码仓库：`daimon-robotics/tacclaw-infinity-page`
 
 论文代码仓库：[daimon-robotics/TacClaw-Infinity](https://github.com/daimon-robotics/TacClaw-Infinity)。本仓库仅用于项目主页及配套素材。
 
-项目页地址：`https://daimon-robotics.github.io/tacClaw-Infinity-page/`
+项目页地址：`https://daimon-robotics.github.io/tacclaw-infinity-page/`
 
 本仓库托管论文项目页及配套素材，使用 GitHub Pages 从 `main` 分支根目录发布。无需单独创建 `daimon-robotics.github.io` 仓库。
 
@@ -17,7 +17,7 @@
 ## 发布到组织的 GitHub Pages
 
 1. 使用可以在 `daimon-robotics` 组织中创建仓库的 GitHub 账号登录。
-2. 新建仓库，Owner 选 `daimon-robotics`，Repository name 填 `tacClaw-Infinity-page`。使用 GitHub Free 时需选择 Public。
+2. 新建仓库，Owner 选 `daimon-robotics`，Repository name 填 `tacclaw-infinity-page`。使用 GitHub Free 时需选择 Public。
 3. 将本文件夹里面的内容放到仓库 `main` 分支的根目录。`index.html` 应直接位于仓库根目录，不要多套一层文件夹；同时保留 `assets` 文件夹与 `.nojekyll` 文件。
 4. 打开仓库 `Settings → Pages`，Source 选择 `Deploy from a branch`，Branch 选择 `main`，Folder 选择 `/(root)`，保存。
 5. 等待 GitHub 完成部署，在 Pages 设置中打开 `Visit site`，检查网页、图片和 Paper 按钮。
