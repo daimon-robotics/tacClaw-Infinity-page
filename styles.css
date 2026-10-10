@@ -27,7 +27,7 @@
 .resource-icon-paper img{width:19px;height:21px}
 .resource-icon-huggingface img{width:26px;height:26px}
 .video-section{padding-top:48px;padding-bottom:0}
-.project-video{max-width:1000px;margin-inline:auto}
+.project-video{width:100%;margin-inline:auto}
 .project-video video{display:block;width:100%;height:auto;aspect-ratio:16 / 9;background:#102330;border-radius:6px}
 .project-video figcaption{text-align:center;margin-top:13px}
 .video-duration{white-space:nowrap;margin-left:12px;color:#687986;font-size:13px}
@@ -36,15 +36,17 @@
 /* The video is now the first visual directly after the resource buttons. */
 .hero .resources{margin-bottom:0}
 
-/* Three equally weighted features in a plain academic layout. */
+/* Video, highlights, and abstract share the same reading width. */
 .highlights-section{padding-bottom:0}
-.highlights-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding-block:30px;border-block:1px solid #dce2e7}
-.highlight-column{min-width:0;padding-inline:32px}
-.highlight-column:first-child{padding-left:0}
-.highlight-column:last-child{padding-right:0}
-.highlight-column+.highlight-column{border-left:1px solid #dce2e7}
-.highlight-column h2{text-align:left;font-size:23px;font-weight:700;line-height:1.35;letter-spacing:-.3px;margin:0 0 16px}
+.highlights-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:36px;padding-block:28px;border-block:1px solid #dce2e7}
+.highlight-column{position:relative;min-width:0}
+.highlight-column+.highlight-column::before{content:"";position:absolute;left:-18px;top:0;bottom:0;width:1px;background:#e4e9ed}
+.highlight-scale{--feature-accent:#af233c}
+.highlight-diversity{--feature-accent:#187a74}
+.highlight-modalities{--feature-accent:#5265a3}
+.highlight-column h2{display:flex;align-items:center;gap:10px;text-align:left;font-size:22px;font-weight:700;line-height:1.35;letter-spacing:-.3px;margin:0 0 17px}
+.highlight-icon{display:block;width:28px;height:28px;flex:0 0 28px;color:var(--feature-accent)}
 .highlight-column p{margin:0;font-size:16px;line-height:1.85;color:#4b5a66}
-.highlight-column strong{color:var(--ink);font-weight:650}
-@media(max-width:900px){.highlight-column{padding-inline:24px}.highlight-column h2{font-size:21px}}
-@media(max-width:760px){.highlights-columns{grid-template-columns:1fr;padding-block:0}.highlight-column,.highlight-column:first-child,.highlight-column:last-child{padding:24px 0}.highlight-column+.highlight-column{border-left:0;border-top:1px solid #dce2e7}.highlight-column h2{margin-bottom:12px}.highlight-column p{font-size:16px}}
+.highlight-column strong{color:var(--feature-accent);font-weight:650}
+@media(max-width:900px){.highlights-columns{column-gap:28px}.highlight-column+.highlight-column::before{left:-14px}.highlight-column h2{font-size:20px;gap:8px}.highlight-icon{width:25px;height:25px;flex-basis:25px}}
+@media(max-width:760px){.highlights-columns{grid-template-columns:1fr;padding-block:0}.highlight-column{padding:24px 0}.highlight-column+.highlight-column{border-top:1px solid #dce2e7}.highlight-column+.highlight-column::before{display:none}.highlight-column h2{font-size:22px;margin-bottom:12px}.highlight-icon{width:28px;height:28px;flex-basis:28px}.highlight-column p{font-size:16px}}
