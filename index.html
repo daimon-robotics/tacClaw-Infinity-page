@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TacClaw-Infinity — Vision-Tactile-Language-Action Dataset</title>
+<meta name="description" content="TacClaw-Infinity: a large-scale Vision-Tactile-Language-Action dataset for dexterous manipulation, with over 10,000 hours of robot-independent demonstrations.">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://daimon-robotics.github.io/TacClaw-Infinity/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23b51f36'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial,sans-serif' font-size='37' font-weight='700' fill='white'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+<script src="site-config.js" defer></script><script src="site.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#abstract">Skip to content</a>
+<header class="topbar"><div class="topbar-inner"><a class="organization" href="https://github.com/daimon-robotics" target="_blank" rel="noopener noreferrer"><img src="assets/daimon.svg" width="23" height="25" alt="">Daimon Robotics</a><nav aria-label="Page sections"><a href="#abstract">Overview</a><a href="#video">Video</a><a href="#dataset">Dataset</a><a href="#approach">Approach</a><a href="#results">Results</a><a href="#citation">Citation</a></nav></div></header>
+<main>
+<section class="hero container" aria-labelledby="paper-title">
+<h1 id="paper-title"><span>TacClaw-Infinity</span><small>A Large-Scale Vision-Tactile-Language-Action Dataset<br class="desktop-break"> for Dexterous Manipulation</small></h1>
+<div class="authors"><span class="author">Fucai Zhu<sup>1,3,*</sup></span>
+<span class="author">Xidong Zhang<sup>1,3,*</sup></span>
+<span class="author">Yichi Zhang<sup>1,*</sup></span>
+<span class="author">Yipan Wang<sup>5</sup></span>
+<span class="author">Fubo Wang<sup>3</sup></span>
+<span class="author">Zibin Wu<sup>6</sup></span>
+<span class="author">Kaiqi Li<sup>7</sup></span>
+<span class="author">Jianhao Jiao<sup>8</sup></span>
+<span class="author">Shihan Lu<sup>9</sup></span>
+<span class="author">Di Hu<sup>10</sup></span>
+<span class="author">Mengdi Xu<sup>11</sup></span>
+<span class="author">Siyu Zhu<sup>12</sup></span>
+<span class="author">Xiaoxiao Long<sup>2</sup></span>
+<span class="author">Yao Yao<sup>2</sup></span>
+<span class="author">Xun Cao<sup>2</sup></span>
+<span class="author">Zhuo Xu<sup>13</sup></span>
+<span class="author">Koichi Hashimoto<sup>4</sup></span>
+<span class="author">Qifeng Chen<sup>14</sup></span>
+<span class="author">Zhe Li<sup>7</sup></span>
+<span class="author">Jianfei Yang<sup>7</sup></span>
+<span class="author">Haofei Lu<sup>15</sup></span>
+<span class="author">Danica Kragic<sup>15</sup></span>
+<span class="author">Shuicheng Yan<sup>16</sup></span>
+<span class="author">Jianghua Duan<sup>1</sup></span>
+<span class="author">Michael Yu Wang<sup>1,3</sup></span>
+<span class="author">Weihao Yuan<sup>1,2,✉</sup></span></div>
+<ol class="affiliations" aria-label="Author affiliations"><li><sup>1</sup>Daimon Robotics</li>
+<li><sup>2</sup>Nanjing University</li>
+<li><sup>3</sup>Great Bay University</li>
+<li><sup>4</sup>Tohoku University</li>
+<li><sup>5</sup>Southern University of Science and Technology</li>
+<li><sup>6</sup>The Hong Kong University of Science and Technology (Guangzhou)</li>
+<li><sup>7</sup>Nanyang Technological University</li>
+<li><sup>8</sup>University College London</li>
+<li><sup>9</sup>Northwest University</li>
+<li><sup>10</sup>Renmin University of China</li>
+<li><sup>11</sup>Tsinghua University</li>
+<li><sup>12</sup>Fudan University</li>
+<li><sup>13</sup>DeepMind</li>
+<li><sup>14</sup>The Hong Kong University of Science and Technology</li>
+<li><sup>15</sup>Royal Institute of Technology</li>
+<li><sup>16</sup>National University of Singapore</li></ol>
+<p class="author-note"><span><sup>*</sup> Equal Contributions</span><span><span aria-hidden="true">✉</span> Corresponding Author: Weihao Yuan</span></p>
+<div class="institution-strip" tabindex="0" role="region" aria-label="Affiliated institutions"><ul class="institution-logos">
+<li title="Daimon Robotics"><span class="institution-mark"><img src="assets/institutions/01.png" alt="Daimon Robotics" decoding="async"></span></li>
+<li title="Nanjing University"><span class="institution-mark"><img src="assets/institutions/02.png" alt="Nanjing University" decoding="async"></span></li>
+<li title="Great Bay University"><span class="institution-mark"><img src="assets/institutions/03.png" alt="Great Bay University" decoding="async"></span></li>
+<li title="Tohoku University"><span class="institution-mark"><img src="assets/institutions/04.png" alt="Tohoku University" decoding="async"></span></li>
+<li title="Southern University of Science and Technology"><span class="institution-mark"><img src="assets/institutions/05.png" alt="Southern University of Science and Technology" decoding="async"></span></li>
+<li title="The Hong Kong University of Science and Technology (Guangzhou)"><span class="institution-mark"><img src="assets/institutions/06.png" alt="The Hong Kong University of Science and Technology (Guangzhou)" decoding="async"></span></li>
+<li title="Nanyang Technological University"><span class="institution-mark institution-mark-crop" style="--crop-x:0;--crop-y:0;--crop-w:840;--crop-h:1079;--image-w:3006;--image-h:1079"><img src="assets/institutions/07.png" alt="Nanyang Technological University" decoding="async"></span></li>
+<li title="University College London"><span class="institution-mark institution-mark-crop" style="--crop-x:23;--crop-y:18;--crop-w:443;--crop-h:536;--image-w:493;--image-h:572"><img src="assets/institutions/08.png" alt="University College London" decoding="async"></span></li>
+<li title="Northwest University"><span class="institution-mark"><img src="assets/institutions/09.png" alt="Northwest University" decoding="async"></span></li>
+<li title="Renmin University of China"><span class="institution-mark"><img src="assets/institutions/10.png" alt="Renmin University of China" decoding="async"></span></li>
+<li title="Tsinghua University"><span class="institution-mark"><img src="assets/institutions/11.png" alt="Tsinghua University" decoding="async"></span></li>
+<li title="Fudan University"><span class="institution-mark"><img src="assets/institutions/12.png" alt="Fudan University" decoding="async"></span></li>
+<li title="DeepMind"><span class="institution-mark"><img src="assets/institutions/13.png" alt="DeepMind" decoding="async"></span></li>
+<li title="The Hong Kong University of Science and Technology"><span class="institution-mark"><img src="assets/institutions/14.png" alt="The Hong Kong University of Science and Technology" decoding="async"></span></li>
+<li title="Royal Institute of Technology"><span class="institution-mark"><img src="assets/institutions/15.png" alt="Royal Institute of Technology" decoding="async"></span></li>
+<li title="National University of Singapore"><span class="institution-mark institution-mark-crop" style="--crop-x:74;--crop-y:33;--crop-w:239;--crop-h:304;--image-w:385;--image-h:356"><img src="assets/institutions/16.png" alt="National University of Singapore" decoding="async"></span></li>
+</ul></div>
+<div class="resources" aria-label="Project resources">
+<a class="resource primary" href="assets/paper.pdf" target="_blank" rel="noopener"><span class="resource-icon resource-icon-paper" aria-hidden="true"><img src="assets/icons/paper.svg" width="22" height="22" alt=""></span>Paper <span class="resource-detail">PDF</span></a>
+<a class="resource pending" data-resource="github" role="link" aria-disabled="true"><span class="resource-icon resource-icon-github" aria-hidden="true"><img src="assets/icons/github.svg" width="22" height="22" alt=""></span>GitHub <span class="resource-detail">Coming soon</span></a>
+<a class="resource pending" data-resource="modelscope" role="link" aria-disabled="true"><span class="resource-icon resource-icon-modelscope" aria-hidden="true"><img src="assets/icons/modelscope.svg" width="22" height="22" alt=""></span>ModelScope <span class="resource-detail">Coming soon</span></a>
+<a class="resource pending" data-resource="huggingface" role="link" aria-disabled="true"><span class="resource-icon resource-icon-huggingface" aria-hidden="true"><img src="assets/icons/huggingface.svg" width="22" height="22" alt=""></span>Hugging Face <span class="resource-detail">Coming soon</span></a>
+</div>
+</section>
+<section id="video" class="section video-section"><div class="container">
+<h2>Project video</h2>
+<figure class="project-video">
+<video id="project-video" controls playsinline preload="metadata" poster="assets/video-poster.jpg" width="1920" height="1080" aria-label="TacClaw-Infinity project video" tabindex="0">
+<source src="assets/overview-video.mp4" type="video/mp4">
+Your browser does not support embedded video. <a href="assets/overview-video.mp4">Watch the project video.</a>
+</video>
+<figcaption>TacClaw-Infinity: a worldwide collaboration. <span class="video-duration">2 min 46 sec</span></figcaption>
+</figure>
+</div></section>
+<section id="abstract" class="section narrow"><h2>Abstract</h2><p class="abstract">Large-scale robot learning increasingly relies on diverse human demonstrations, yet tactile manipulation data remain difficult to scale, and existing multimodal datasets often lack consistent quality control and structured supervision. We present <strong>TacClaw-Infinity</strong>, a large-scale structured Vision-Tactile-Language-Action (VTLA) dataset for contact-rich manipulation, collected with <strong>TacClaw</strong>, a tactile-enabled UMI-style handheld interface that records synchronized visual observations, fingertip tactile signals, and end-effector trajectories without requiring a target robot during data collection. TacClaw-Infinity is built through distributed collection across homes, laboratories, industrial workplaces, retail stores, and outdoor environments including tasks contributed by academic and industrial collaborators. Together, these efforts yield over <strong>10,000 hours</strong>, 1 million episodes, and <strong>1 billion frames</strong> spanning more than <strong>1,000 task types</strong>. We develop a scalable pipeline for trajectory reconstruction, multimodal quality control, embodiment-aware filtering, and structured annotation, covering contact-centric segmentation, subtask description, and spatial grounding. We validate TacClaw-Infinity at both the data and model levels: At the data level, we assess the collection interface, the action-space compatibility of the curated demonstrations, and the structured annotations, while for the model level, we demonstrate cross-embodiment transfer across three heterogeneous robots without robot-specific demonstrations. The code and dataset will be made public.</p></section>
+<section id="dataset" class="section section-wash"><div class="container">
+<h2>A dataset built across places, people, and tasks</h2>
+<div class="metrics" aria-label="Dataset scale"><div><strong>10,000+</strong><span>hours of demonstrations</span></div><div><strong>1 million</strong><span>episodes</span></div><div><strong>1 billion</strong><span>synchronized frames</span></div><div><strong>1,000+</strong><span>task types</span></div></div>
+<p class="section-intro">Collected with 200 TacClaw devices across 20 organizations and more than 50 locations, including homes, laboratories, industrial workplaces, retail stores, and outdoor environments.</p>
+<figure class="research-figure"><a href="assets/statistics.webp" target="_blank" rel="noopener" aria-label="View dataset statistics at full resolution"><img src="assets/statistics.webp" width="2400" height="935" loading="lazy" alt="Dataset statistics showing the hierarchy of manipulation actions and objects, coverage from distributed collection, action and object vocabularies, and tactile feature diversity."></a><figcaption>Dataset statistics: manipulation action–object distributions, multi-site versus single-site coverage, vocabulary frequencies, and tactile feature diversity. Shaded bands in the coverage comparison are 95% resampling intervals.</figcaption></figure>
+<div class="text-columns"><div><h3>Beyond a single environment</h3><p>Shared task protocols provide repeated demonstrations of common skills, while collector-defined tasks contribute a long tail of manipulation behaviors. Both single-hand and bimanual interactions are represented.</p></div><div><h3>Four synchronized modalities</h3><p>Episodes combine visual observations, fingertip tactile signals, end-effector trajectories, and language descriptions. Contact events connect the temporal, semantic, and spatial annotations.</p></div></div>
+</div></section>
+<section id="approach" class="section"><div class="container">
+<h2>From human demonstrations to structured supervision</h2>
+<p class="section-intro">TacClaw enables demonstrations without a target robot during collection. A shared processing pipeline then reconstructs trajectories, checks robot executability, and uses touch to anchor annotations.</p>
+<ol class="pipeline"><li><span class="step-number">01</span><h3>Collect with TacClaw</h3><p>Wrist and egocentric views, gripper states, fingertip tactile signals, and end-effector motion capture how people interact with objects.</p></li><li><span class="step-number">02</span><h3>Curate trajectories</h3><p>Reconstructed poses are evaluated for workspace reachability and manipulability on each target embodiment before policy training.</p></li><li><span class="step-number">03</span><h3>Anchor annotations in contact</h3><p>Contact and release delimit interaction phases. The inter-finger contact point localizes the manipulated object across camera views.</p></li></ol>
+<figure class="research-figure annotation"><a href="assets/annotation.webp" target="_blank" rel="noopener" aria-label="View contact-anchored annotation at full resolution"><img src="assets/annotation.webp" width="2400" height="2130" loading="lazy" alt="Contact-anchored annotation: tactile contact and release define temporal segments, and a shared 3D contact point anchors object masks across camera views."></a><figcaption>Contact-anchored structured annotation. Tactile events define segment boundaries and supply a physical prior for identifying the manipulated object across synchronized views.</figcaption></figure>
+<div class="hardware-study"><div><p class="eyebrow">TacClaw interface</p><h3>Preserving the operator’s sense of contact</h3><p>A short, rigid path from the fingers to the jaws lets operators feel and regulate contact during a demonstration.</p><p>In the paper’s blindfolded study of nine participants, the mean first-perceived contact force was <strong>11.6 ± 3.3 gf</strong> with TacClaw, compared with 49.8 ± 12.0 gf for the UMI interface and 204.0 ± 58.2 gf for the finger-loop interface.</p></div><figure><a href="assets/haptic-study.webp" target="_blank" rel="noopener" aria-label="View the haptic subject study at full resolution"><img src="assets/haptic-study.webp" width="2400" height="906" loading="lazy" alt="Blindfolded contact perception experiment with three handheld interfaces and a plot of the measured perception thresholds."></a><figcaption>Lower thresholds indicate that lighter contact can be perceived. All nine participants had their lowest threshold with TacClaw.</figcaption></figure></div>
+</div></section>
+<section id="results" class="section section-wash"><div class="container">
+<h2>Zero-robot cross-embodiment transfer</h2>
+<p class="section-intro">Policies trained on TacClaw demonstrations transfer to Tianji, RealMan, and DM-Sparky without collecting robot-specific demonstrations. We evaluate cup stacking, bottle sorting, and vase wiping, using 50 trials per task.</p>
+<p class="result-summary">With tactile input, mean success reaches <strong>74.0%</strong> for π<sub>0.5</sub> and <strong>72.7%</strong> for StarVLA across the three tasks and robot embodiments.</p>
+<figure class="research-figure"><a class="task-sequence-frame" href="assets/tasks.webp" target="_blank" rel="noopener" aria-label="View task execution sequences at full resolution"><img src="assets/tasks.webp" width="2400" height="1350" loading="lazy" alt="Representative execution sequences for cup stacking, bottle sorting, and vase wiping across the evaluated robot embodiments."></a><figcaption>Cup stacking tests long-horizon coordination; bottle sorting tests tactile-dependent state discrimination; vase wiping tests sustained contact regulation.</figcaption></figure>
+<details class="detailed-results"><summary>Success rates by task and embodiment</summary><div class="result-table-wrap"><table><caption>Success rates (%) reported in the manuscript</caption><thead><tr><th scope="col">Policy</th><th scope="col">Embodiment</th><th scope="col">Cup stacking</th><th scope="col">Bottle sorting</th><th scope="col">Vase wiping</th><th scope="col">Average</th></tr></thead><tbody>
+<tr><th scope="row">π<sub>0.5</sub></th><td>Tianji</td><td>90</td><td>44</td><td>28</td><td>54.0</td></tr><tr><th scope="row">π<sub>0.5</sub></th><td>RealMan</td><td>86</td><td>42</td><td>16</td><td>48.0</td></tr><tr><th scope="row">π<sub>0.5</sub></th><td>DM-Sparky</td><td>82</td><td>44</td><td>18</td><td>48.0</td></tr>
+<tr class="group-start"><th scope="row">π<sub>0.5</sub> + Tactile</th><td>Tianji</td><td>94</td><td>96</td><td>54</td><td>81.3</td></tr><tr><th scope="row">π<sub>0.5</sub> + Tactile</th><td>RealMan</td><td>80</td><td>76</td><td>38</td><td>64.7</td></tr><tr><th scope="row">π<sub>0.5</sub> + Tactile</th><td>DM-Sparky</td><td>100</td><td>92</td><td>36</td><td>76.0</td></tr>
+<tr class="group-start"><th scope="row">StarVLA</th><td>Tianji</td><td>78</td><td>46</td><td>12</td><td>45.3</td></tr><tr><th scope="row">StarVLA</th><td>RealMan</td><td>78</td><td>38</td><td>8</td><td>41.3</td></tr><tr><th scope="row">StarVLA</th><td>DM-Sparky</td><td>80</td><td>54</td><td>20</td><td>51.3</td></tr>
+<tr class="group-start"><th scope="row">StarVLA + Tactile</th><td>Tianji</td><td>70</td><td>94</td><td>60</td><td>74.7</td></tr><tr><th scope="row">StarVLA + Tactile</th><td>RealMan</td><td>76</td><td>84</td><td>58</td><td>72.7</td></tr><tr><th scope="row">StarVLA + Tactile</th><td>DM-Sparky</td><td>84</td><td>90</td><td>38</td><td>70.7</td></tr>
+</tbody></table></div></details>
+</div></section>
+<section id="citation" class="section narrow"><div class="citation-heading"><h2>Citation</h2><button id="copy-citation" type="button">Copy BibTeX</button></div><p class="citation-note">Manuscript · 2026</p><pre id="bibtex" tabindex="0">@misc{zhu2026tacclawinfinity,
+  title  = {TacClaw-Infinity: A Large-Scale Vision-Tactile-Language-Action Dataset for Dexterous Manipulation},
+  author = {Zhu, Fucai and Zhang, Xidong and Zhang, Yichi and Wang, Yipan and Wang, Fubo and
+            Wu, Zibin and Li, Kaiqi and Jiao, Jianhao and Lu, Shihan and Hu, Di and Xu, Mengdi and
+            Zhu, Siyu and Long, Xiaoxiao and Yao, Yao and Cao, Xun and Xu, Zhuo and
+            Hashimoto, Koichi and Chen, Qifeng and Li, Zhe and Yang, Jianfei and Lu, Haofei and
+            Kragic, Danica and Yan, Shuicheng and Duan, Jianghua and Wang, Michael Yu and
+            Yuan, Weihao},
+  year   = {2026},
+  note   = {Manuscript}
+}</pre><p id="copy-status" class="copy-status" aria-live="polite"></p></section>
+
+</main>
+<footer><div class="container"><strong>TacClaw-Infinity</strong><p>Project page maintained by <a href="https://github.com/daimon-robotics" target="_blank" rel="noopener noreferrer">Daimon Robotics</a>.</p><p class="footer-note">Academic project-page structure inspired by <a href="https://palm-e.github.io/" target="_blank" rel="noopener noreferrer">PaLM-E</a>.</p></div></footer>
+</body></html>
