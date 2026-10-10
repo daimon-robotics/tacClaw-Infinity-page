@@ -1,0 +1,17 @@
+Resource icon sources — retrieved 2026-10-09
+
+Paper: Bootstrap Icons file-earmark-pdf-fill, MIT license; red fill for the resource button.
+https://github.com/twbs/icons/blob/main/icons/file-earmark-pdf-fill.svg
+https://github.com/twbs/icons/blob/main/LICENSE
+
+GitHub: official black Invertocat, displayed unchanged on a pale violet icon tile.
+https://brand.github.com/foundations/logo
+https://brand.github.com/GitHub_Logos.zip
+
+ModelScope: Simple Icons, CC0; rendered in the brand color #624AFF.
+https://github.com/simple-icons/simple-icons/blob/develop/icons/modelscope.svg
+https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md
+
+Hugging Face: official color logo.
+https://huggingface.co/brand
+https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg
