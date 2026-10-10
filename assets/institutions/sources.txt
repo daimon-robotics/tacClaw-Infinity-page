@@ -1,0 +1,88 @@
+TacClaw-Infinity: institution logo sources
+Retrieved: 2026-10-09
+
+The affiliation numbers match sections/00_frontmatter.tex.
+SVG artwork is retained beside PNG renderings where available. Existing vector paths were used for icon-only variants; wordmark paths were removed where requested. Legacy white raster backgrounds are composited away in the PDF with multiply blending; those source PNGs may still contain white pixels.
+Daimon uses its original vector silhouette in the official favicon red (#E61736), without a surrounding tile.
+All 16 institution positions are filled and arranged on one row. No number labels are displayed below the logos.
+
+
+01. Daimon Robotics
+File: 01.png
+Source: https://www.dmrobot.com/template/index/pc_en/images/icon/logo-icon.svg
+
+02. Nanjing University
+File: 02.png
+Source: https://njunju.nju.edu.cn/3647/list.htm
+Original download: https://njunju.nju.edu.cn/_upload/article/files/48/c4/076f92fc4d90b01778f6526efa01/ee817df2-0f1b-4663-b98c-78dbf0aba4eb.rar
+Asset: 01校标.jpg from the official visual-identity archive (1723 x 2160), converted to PNG without cropping or recoloring.
+
+03. Great Bay University
+File: 03.png (rendered from 03.svg)
+Source: https://upload.wikimedia.org/wikipedia/commons/d/d9/Great_Bay_University_logo.svg
+Source page: https://commons.wikimedia.org/wiki/File:Great_Bay_University_logo.svg
+Standalone GBU lettermark; Chinese and English university wordmarks omitted.
+
+04. Tohoku University
+File: 04.png (rendered from 04.svg)
+Source: https://www.tohoku.ac.jp/assets/img/svgs/logo.svg
+Transparent official vector artwork. The 16 letter paths for TOHOKU UNIVERSITY were removed; the emblem paths are unchanged.
+
+05. Southern University of Science and Technology
+File: 05.png
+Source: https://www.sustech.edu.cn/uploads/logo1.png
+
+06. The Hong Kong University of Science and Technology (Guangzhou)
+File: 06.png (rendered from 06.svg)
+Vector geometry: https://hkust.edu.hk/sites/default/files/2024-03/HKUST_logo_1.svg
+The shared institutional emblem is rendered without wordmark, with Guangzhou colors sampled from its official icon: blue #003974 and gold #A88337.
+Color reference: https://material.hkust-gz.edu.cn/wp-content/uploads/2023/04/cropped-favicon-1-1-192x192.png
+
+07. Nanyang Technological University
+File: 07.png
+Source: https://www.ntu.edu.sg/ResourcePackages/NTU/assets/images/NTU_Logo.png
+The original raster is preserved. LaTeX clips the right-hand university wordmark at placement time, showing only the shield (leftmost 840 pixels at 300 dpi).
+
+08. University College London
+File: 08.png
+Source: user-supplied codex-clipboard-f8463666-4115-4247-94e5-c8bd1ab3c613.png (493 x 572).
+The supplied black portico-and-UCL design is retained exactly. Excess outer margins are clipped in LaTeX, and the white background is composited away with multiply blending.
+
+09. Northwest University
+File: 09.png
+Source: https://www.nwu.edu.cn/__local/3/63/A5/73750A799BDE7ED88E21F1A0A65_89AD1DD1_24F50.png
+
+10. Renmin University of China
+File: 10.png
+Source: https://en.ruc.edu.cn/att/26.files/images/share_logo.png
+
+11. Tsinghua University
+File: 11.png
+Source: https://upload.wikimedia.org/wikipedia/commons/e/ec/Tsinghua_University_Logo.svg
+Source page: https://commons.wikimedia.org/wiki/File:Tsinghua_University_Logo.svg
+Attributed creator: Tsinghua University; Commons lists the emblem as public domain in China.
+
+12. Fudan University
+File: 12.png (rendered from 12.svg)
+Source: https://upload.wikimedia.org/wikipedia/commons/4/44/Fudan_University_Logo.svg
+Source page: https://commons.wikimedia.org/wiki/File:Fudan_University_Logo.svg
+Checked against the official identity page: https://fudan.edu.cn/bsxt/list.htm
+
+13. DeepMind
+File: 13.png
+Source: https://storage.googleapis.com/gdm-deepmind-com-prod-public/icons/google_deepmind_48dp.svg
+
+14. The Hong Kong University of Science and Technology
+File: 14.png (rendered from 14.svg)
+Source: https://hkust.edu.hk/sites/default/files/2024-03/HKUST_logo_1.svg
+The five HKUST letter paths were removed; the original emblem paths are unchanged.
+
+15. Royal Institute of Technology
+File: 15.png (rendered from 15.svg)
+Source: https://www.kth.se/img/logotype-white-6f02f4554cba157ca832fa452bf242a4.svg
+The official vector silhouette is rendered in blue #2258A5, sampled from the previous official logo, without a surrounding blue square.
+
+16. National University of Singapore
+File: 16.png
+Source: user-supplied codex-clipboard-b5905933-c6a6-4ea5-bbe0-cd475d5bddbf.png (385 x 356).
+The supplied shield design is retained exactly. Excess outer margins are clipped in LaTeX, and the white background is composited away with multiply blending.
