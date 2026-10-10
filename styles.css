@@ -35,3 +35,40 @@
 
 /* The video is now the first visual directly after the resource buttons. */
 .hero .resources{margin-bottom:0}
+
+/* A shared summary of scale, collection diversity, and synchronized modalities. */
+.highlights-section{padding-bottom:0}
+.highlights-eyebrow{text-align:center;margin-bottom:12px}
+.highlights-section h2{margin-bottom:30px}
+.data-highlights{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.highlight-card{min-width:0;padding:26px 28px;border:1px solid #dfe5eb;border-radius:12px;background:#fff}
+.highlight-scale{grid-column:1 / -1;background:#fbf5f6;border-color:#ebd9df}
+.highlight-heading{display:flex;align-items:center;gap:11px;margin-bottom:22px}
+.highlight-heading h3{font-size:21px;margin:0;font-weight:700}
+.highlight-icon{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;background:#f2e5e9;color:var(--accent);flex-shrink:0}
+.highlight-icon svg{width:23px;height:23px}
+.scale-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin:0;gap:12px}
+.scale-grid>div{display:flex;flex-direction:column;align-items:center;border-right:1px solid #e9d9de;padding:0 12px}
+.scale-grid>div:last-child{border-right:0}
+.scale-grid dt{order:2;font-size:14px;color:#6b5360;margin-top:5px}
+.scale-grid dd{order:1;margin:0;white-space:nowrap;font-size:clamp(26px,3vw,35px);font-weight:700;line-height:1.3;letter-spacing:-1px;color:var(--accent);font-variant-numeric:tabular-nums}
+.highlight-diversity{background:#f5f8fb}
+.highlight-diversity .highlight-icon{color:#285a80;background:#e3edf5}
+.diversity-reach{display:flex;flex-wrap:wrap;gap:16px 26px;margin:0 0 16px}
+.diversity-reach strong{font-size:26px;line-height:1.25;color:#285a80}
+.diversity-reach span{font-size:14px;font-weight:500}
+.highlight-copy{font-size:15px;line-height:1.6;color:#52616f;margin:0 0 16px}
+.environment-list{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:0;padding:0}
+.environment-list li{font-size:12px;line-height:1.5;padding:5px 9px;border:1px solid #dae4ec;border-radius:5px;background:#fff;color:#3d5366}
+.environment-list .environment-more{border-color:transparent;background:transparent;color:#66727d}
+.highlight-modalities .highlight-icon{color:#4d4984;background:#eeedf8}
+.modality-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;list-style:none;margin:0;padding:0}
+.modality-list li{display:flex;align-items:center;gap:12px;min-height:65px;padding:12px 15px;border:1px solid #e2e5ed;border-radius:7px;background:#fafafd;color:#4d4984}
+.modality-list svg{width:25px;height:25px;flex-shrink:0}
+.modality-list strong{display:block;color:#343743;font-size:15px;font-weight:650;line-height:1.35}
+.modality-list small{display:block;font-size:12px;line-height:1.5;color:#666777}
+.modality-list .modality-tactile{background:#f7f0f3;border-color:#ead9e0;color:var(--accent)}
+@media(max-width:900px){.highlight-card{padding:22px}.scale-grid>div{padding-inline:4px}.scale-grid dd{font-size:28px}.diversity-reach{gap:13px 18px}}
+@media(max-width:760px){.data-highlights{grid-template-columns:1fr;gap:16px}.highlights-section{padding-bottom:0}.highlights-section h2{font-size:25px;max-width:380px;margin-inline:auto}.highlight-card{padding:22px 20px}.highlight-heading{margin-bottom:18px}.scale-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 8px}.scale-grid>div{border:0}.scale-grid>div:last-child{grid-column:1 / -1}.scale-grid dd{font-size:clamp(20px,6vw,29px);letter-spacing:-.6px}.scale-grid dt{font-size:13px}.modality-list li{padding:12px;gap:10px}.diversity-reach strong{font-size:25px}}
+
+@media(max-width:380px){.modality-list{grid-template-columns:1fr}.highlight-heading h3{font-size:19px}.highlight-card{padding-inline:16px}}
