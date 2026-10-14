@@ -49,7 +49,7 @@ Paper 按钮使用本地的 `assets/paper.pdf`。以后替换同名文件即可�
 
 ## 视频与图标
 
-已加入提供的 1080p、2 分 46 秒演示视频，位于作者、机构和资源入口之后、摘要之前的 Project video 区域。`assets/overview-video.mp4` 保留原始视频编码，只调整 MP4 索引顺序以便网页更快起播；无自动播放。`assets/video-poster.jpg` 取自原视频第 2 秒。
+当前视频为 2026-10-14 更新的 `TacClaw_Infinity_video_v7_10_1.1x.mp4`，位于作者、机构和资源入口之后、摘要之前。视频为 1920×1080、30 fps、H.264、无声，精确时长 135.467 秒（页面显示 2 分 15 秒），约 82.21 MB。`assets/overview-video.mp4` 与提供的原文件逐字节一致，没有再次编码或降低画质；原文件已将 MP4 索引放在文件开头，支持渐进播放。页面继续使用手动播放和 `preload="metadata"`。`assets/video-poster.jpg` 取自新版视频第 1.5 秒。视频与封面链接加入 `v=20261014-v7-10` 以更新浏览器缓存。
 
 16 个机构图标沿用论文中的编号顺序；桌面端显示为一排，小屏幕可横向滚动，图标下不显示序号。NTU、UCL、NUS 的显示裁切与论文相同，原图保留。素材来源见 `assets/institutions/sources.txt`。
 
