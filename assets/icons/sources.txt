@@ -15,3 +15,13 @@ https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md
 Hugging Face: official color logo.
 https://huggingface.co/brand
 https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg
+
+Dataset resource icons — added 2026-10-15
+
+resource-arxiv.svg: Simple Icons arXiv, CC0; red fill #B31B1B.
+Source blob SHA: 300d3c646fa4c2f4741a140af8f0a2bdec964043
+Source file: https://github.com/simple-icons/simple-icons/blob/develop/icons/arxiv.svg
+https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md
+
+resource-github.svg: purple rendition of the official GitHub Invertocat source above.
+resource-home.svg: locally drawn house outline, blue #3B82F6.
