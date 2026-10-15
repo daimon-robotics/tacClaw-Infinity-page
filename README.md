@@ -35,14 +35,14 @@
 
 `project` 已填写确认的项目页地址。论文首页中的 Project URL 可以在网站正式发布后使用该地址。
 
-Paper 按钮使用本地的 `assets/paper.pdf`。以后替换同名文件即可更新论文。
+Paper 按钮指向 [arXiv PDF](https://arxiv.org/pdf/2610.20320)，论文信息页为 [arXiv:2610.20320](https://arxiv.org/abs/2610.20320)。本地 `assets/paper.pdf` 保留用于此前已分享的链接。
 
 ## 更新内容
 
 - `index.html`：标题、26 位作者、16 个机构、摘要、介绍和实验结果。
 - `styles.css`：颜色、字体、间距及手机布局。
 - `site.js`：资源入口和 BibTeX 复制。
-- `citation.bib`：当前按 2026 年 manuscript 整理的引用。取得正式 arXiv 编号或出版信息后，应同步更新网页 Citation 和此文件。
+- `citation.bib`：引用已同步为 arXiv:2610.20320，包含完整作者列表、arXiv 编号、cs.RO 分类和公开链接；与网页 Citation 保持一致。
 - `assets/`：数据集统计、接触标注流程、任务序列、触觉实验图片、视频及论文 PDF。teaser 原图保留为素材，主页不再展示。
 
 全部科研图和数字来自提供的 TacClaw-Infinity 论文材料。布局与内容组织参考 PaLM-E 项目页，未复制其代码、研究内容或媒体资源。
